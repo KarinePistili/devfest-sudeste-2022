@@ -1,6 +1,7 @@
 {
   "projects": {
-    "production": "devfestcerrado2022"
+    "production": "devfest-sudeste-2022",
+    "default": "devfest-sudeste-2022"
   },
   "targets": {}
 }

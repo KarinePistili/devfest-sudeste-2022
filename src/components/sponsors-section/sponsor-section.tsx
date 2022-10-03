@@ -71,12 +71,12 @@ const SponsorsSection: React.FC = ({ }) => {
 
                     <div>
                         <Row>
-
-                            <div className={styles.SponsorWrapper}>
+                            <h2 style={{ color: 'red' }}>Em Breve!</h2>
+                            {/* <div className={styles.SponsorWrapper}>
                                 {
                                     supports.items.map(mapSponsorCard)
                                 }
-                            </div>
+                            </div> */}
                         </Row>
                     </div>
                 </div>

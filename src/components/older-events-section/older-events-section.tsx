@@ -35,7 +35,7 @@ const OlderEvenstsSection: React.FC = ({ }) => {
                 <div className={styles.MarqueeInner}>
                     <div className={styles.ConstructItems}>
                         <div className={styles.ConstructItem}>Construa seu app em Flutter</div>
-                        <div className={styles.ConstructItem}>Construa seu app em Angular</div>
+                        <div className={styles.ConstructItem}>Desenvolva produtos com Firebase</div>
                         <div className={styles.ConstructItem}>Fez o deploy usando Google Cloud?</div>
                         <div className={styles.ConstructItem}>Já utilizou Tensor Flow?</div>
                         <div className={styles.ConstructItem}>Construa seu app em Android</div>

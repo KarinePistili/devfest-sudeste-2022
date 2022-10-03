@@ -80,9 +80,10 @@ const SpeakersSection: React.FC = ({ }) => {
         <div id="speakers" className={styles.container}>
           <h1>Palestrantes</h1>
           <p>
-            O time de palestrantes do Devfest Cerrado 2022 traz grandes nomes da área técnica e referências em liderança de comunidades. Reunimos em um só evento Google Developer Experts (GDEs), Tech Leads, pessoas desenvolvedoras e principalmente pessoas resolvedoras de problemas. Esse é um evento que visa fomentar a comunidade de tecnologia, indo além de conhecimento técnico, contando com muita interatividade, conexões e diversidade.
+            O time de palestrantes do Devfest Sudeste 2022 traz grandes nomes da área técnica e referências em liderança de comunidades. Reunimos em um só evento Google Developer Experts (GDEs), Tech Leads, pessoas desenvolvedoras e principalmente pessoas resolvedoras de problemas. Esse é um evento que visa fomentar a comunidade de tecnologia, indo além de conhecimento técnico, contando com muita interatividade, conexões e diversidade.
           </p>
-          <div className={styles.cards}>
+          <h2 style={{ color: 'red' }}>Em Breve!</h2>
+          {/* <div className={styles.cards}>
             <Carousel
               activeIndex={activeIndex}
               next={next}
@@ -92,7 +93,7 @@ const SpeakersSection: React.FC = ({ }) => {
             >
               {displaySpeakers}
             </Carousel>
-          </div>
+          </div> */}
           {/*<div className={styles.button_container}>
             <a
               color="info"
