@@ -1,5 +1,4 @@
-const speakers = [
-  {}
+const speakers: any[] = [
   // {
   //   id: 1,
   //   photo: 'https://firebasestorage.googleapis.com/v0/b/devfestcerrado2022.appspot.com/o/speakers%2Fjessica-costa.jpg?alt=media',

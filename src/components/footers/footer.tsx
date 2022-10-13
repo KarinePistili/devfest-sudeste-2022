@@ -23,9 +23,9 @@ const Footer: React.FC<FooterProps> = ({ }) => {
           <NavItem>
             <NavLink href="#sponsors">Patrocinadores</NavLink>
           </NavItem>
-          <NavItem className={styles.FooterRegister}>
+          {/* <NavItem className={styles.FooterRegister}>
             <NavLink href={configValues.eventLinkRegistrationUrl}>Se cadastrar</NavLink>
-          </NavItem>
+          </NavItem> */}
           {/*<NavItem>
             <NavLink href="#">Agenda</NavLink>
           </NavItem>
