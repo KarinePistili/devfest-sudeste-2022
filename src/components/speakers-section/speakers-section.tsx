@@ -1,8 +1,10 @@
 /*eslint-disable*/
 import { Speaker } from "models/speaker";
 import React, { useEffect, useState } from "react";
+import configValues from "helpers/config";
 import {
   Col,
+  Row,
   Container,
   Carousel,
   CarouselItem,
@@ -78,11 +80,10 @@ const SpeakersSection: React.FC = ({ }) => {
     <>
       <Container>
         <div id="speakers" className={styles.container}>
-          <h1>Palestrantes</h1>
-          <p>
+          <h2>Palestrantes</h2>
+          <p className={styles.Description}>
             O time de palestrantes do Devfest Sudeste 2022 traz grandes nomes da área técnica e referências em liderança de comunidades. Reunimos em um só evento Google Developer Experts (GDEs), Tech Leads, pessoas desenvolvedoras e principalmente pessoas resolvedoras de problemas. Esse é um evento que visa fomentar a comunidade de tecnologia, indo além de conhecimento técnico, contando com muita interatividade, conexões e diversidade.
           </p>
-          <h2 style={{ color: 'red' }}>Em Breve!</h2>
           {/* <div className={styles.cards}>
             <Carousel
               activeIndex={activeIndex}
@@ -102,6 +103,17 @@ const SpeakersSection: React.FC = ({ }) => {
               Ver todos
             </a>
   </div>*/}
+
+        <h2 className={styles.CallForPapersTitle}>Call for Papers</h2>
+        <p className={styles.Description}>
+          Com muita alegria anuciamos que nosso Call for Papers está aberto e esperamos muitas submissões de palestras para o DevFest Sudeste!!!
+          O nosso evento ocorrerá nos dias 16 e 17/12 e será TOTALMENTE online.
+          Quer compartilhar seu conhecimento com a galera? Submeta sua palestra para o nosso DevFest!!!
+          
+          </p>
+          <Row style={{ marginTop: '50px', textAlign: 'start' }}>
+              <Col> <a className={styles.RegisterCallForPapersButton} href={configValues.eventCallForPapersForm}>Envie sua proposta!</a> </Col>
+          </Row>
         </div>
       </Container>
     </>

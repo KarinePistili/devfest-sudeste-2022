@@ -59,24 +59,23 @@ const SponsorsSection: React.FC = ({ }) => {
                         Estas são as empresas que nos ajudaram a fazer este evento acontecer!
                     </p>*/}
 
-                    <h4>
+                    <h3>
                         Apoio
-                    </h4>
+                    </h3>
 
                     {Object.keys(sponsors).map((el) => mapSponsorLevel(sponsors[el]))}
 
-                    <h4>
+                    <h3 style={{marginTop: '40px'}}>
                         Organização
-                    </h4>
+                    </h3>
 
                     <div>
                         <Row>
-                            <h2 style={{ color: 'red' }}>Em Breve!</h2>
-                            {/* <div className={styles.SponsorWrapper}>
+                            <div className={styles.SponsorWrapper}>
                                 {
                                     supports.items.map(mapSponsorCard)
                                 }
-                            </div> */}
+                            </div>
                         </Row>
                     </div>
                 </div>

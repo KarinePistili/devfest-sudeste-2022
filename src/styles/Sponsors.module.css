@@ -31,12 +31,12 @@
 
 .SponsorCardBody {
     position: relative;
-    width: 180px;
-    height: 90px;
+    width: 220px;
+    height: 120px;
 }
 
 .SponsorCardBodyImage {
-    padding: 0px 10px !important;
+    padding: 0px 0px !important;
 }
 
 #sponsors {
