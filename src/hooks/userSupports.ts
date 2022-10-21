@@ -7,6 +7,7 @@ const supports = {
         { name: 'GDG Caraguatatuba', logo: '/GDG-Caraguatatuba-Light Horizontal-Logo.png', url: 'https://gdg.community.dev/gdg-caraguatatuba/' },
         { name: 'GDG Lavras', logo: '/GDG-Lavras-Light-Horizontal-Logo.png', url: 'https://gdg.community.dev/gdg-lavras/' },
         { name: 'GDG Mogi Guaçu', logo: '/GDG-Mogi-Guaçu-Light-Horizontal-Logo.png', url: 'https://gdg.community.dev/gdg-mogi-guacu/' },
+        { name: 'GDG São João da Boa Vista', logo: '/GDG-São-João-da-Boa-Vista-Light-Horizontal-Logo.png', url: 'https://gdg.community.dev/gdg-sao-joao-da-boa-vista/' },
         { name: 'GDG São José dos Campos', logo: '/GDG-São-José-dos-Campos-Light-Horizontal-Logo.png', url: 'https://gdg.community.dev/gdg-sao-jose-dos-campos/' },
         { name: 'GDG Sorocaba', logo: '/GDG-Sorocaba-Light-Horizontal-Logo.png', url: 'https://gdg.community.dev/gdg-sorocaba/' },
         { name: 'WTM Belo Horizonte', logo: '/WTM-Belo-Horizonte-Light-Horizontal-Logo.png', url: 'https://developers.google.com/womentechmakers' },
