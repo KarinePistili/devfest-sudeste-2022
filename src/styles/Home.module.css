@@ -104,6 +104,7 @@
 }
 
 .CounterListItem {
+  user-select: none;
   background: var(--white);
   border-radius: 10px;
   border: 3px transparent solid;

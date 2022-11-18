@@ -4,7 +4,7 @@ import BaseLayout from '../layouts/base-layout';
 import SpeakersSection from '../components/speakers-section/speakers-section';
 import OlderEvenstsSection from 'components/older-events-section/older-events-section';
 import SponsorsSection from 'components/sponsors-section/sponsor-section';
-
+import TracksSection from 'components/tracks-section/tracks-section';
 
 // https://alvarotrigo.com/blog/css-animations-scroll/
 
@@ -38,6 +38,9 @@ const Home = ({ }) => {
 
         <section style={sectionStyle}>
           <OlderEvenstsSection />
+        </section>
+        <section style={sectionStyle}>
+          <TracksSection />
         </section>
         <section style={sectionStyle}>
           <SpeakersSection />
