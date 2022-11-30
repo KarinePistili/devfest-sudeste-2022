@@ -112,7 +112,7 @@ const SpeakersSection: React.FC = ({ }) => {
           
           </p>
           <Row style={{ marginTop: '50px', textAlign: 'start' }}>
-              <Col> <a className={styles.RegisterCallForPapersButton} href={configValues.eventCallForPapersForm}>Envie sua proposta!</a> </Col>
+              {/* <Col> <a className={styles.RegisterCallForPapersButton} href={configValues.eventCallForPapersForm}>Envie sua proposta!</a> </Col> */}
           </Row>
         </div>
       </Container>

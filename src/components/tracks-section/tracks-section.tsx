@@ -10,9 +10,9 @@ import styles from 'styles/Tracks.module.css';
 
 const Tracks: Record<string, string> = {
     mobile: 'Mobile',
-    carreiras: 'Carreiras',
+    carreiras: 'Carreira',
     cloud: 'Cloud',
-    devops: 'DevOps',
+    devops: 'Infra e DevOps',
 }
 
 const TracksSection: React.FC = ({ }) => {
