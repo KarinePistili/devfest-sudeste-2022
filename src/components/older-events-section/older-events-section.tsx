@@ -34,13 +34,14 @@ const OlderEvenstsSection: React.FC = ({ }) => {
             <div className={styles.MarqueeOuter}>
                 <div className={styles.MarqueeInner}>
                     <div className={styles.ConstructItems}>
-                        <div className={styles.ConstructItem}>Construa seu app em Flutter</div>
-                        <div className={styles.ConstructItem}>Desenvolva produtos com Firebase</div>
-                        <div className={styles.ConstructItem}>Fez o deploy usando Google Cloud?</div>
-                        <div className={styles.ConstructItem}>Já utilizou Tensor Flow?</div>
-                        <div className={styles.ConstructItem}>Construa seu app em Android</div>
-                        <div className={styles.ConstructItem}>Já criou sua action para o Google Assistant?</div>
-                        <div className={styles.ConstructItem}>Integrou as APIs do Maps?</div>
+                        <div className={styles.ConstructItem}>A magia do Firebase</div>
+                        <div className={styles.ConstructItem}>Acessibilidade no Android</div>
+                        <div className={styles.ConstructItem}>Carreiras: processos seletivos</div>
+                        <div className={styles.ConstructItem}>CNN e TensorFlow</div>
+                        <div className={styles.ConstructItem}>Inteligência Artifical com Google Vertex</div>
+                        <div className={styles.ConstructItem}>Boas práticas com Cloud Composer</div>
+                        <div className={styles.ConstructItem}>Mulher Tech Lead</div>
+                        <div className={styles.ConstructItem}>E muito mais!</div>
                     </div>
                 </div>
             </div>

@@ -1,23 +1,27 @@
+.Agenda {
+  padding-top: 20px;
+  padding-bottom: 50px;
+}
 .Description {
   padding-right: 100px;
   text-align: justify;
   margin-top: 60px;
   font-size: 1.2rem;
+  padding-bottom: 20px;
 }
 
 .Tracks {
-  align-items: center;
+  align-items: stretch;
   display: flex;
   font-family: 'Open Sans', sans-serif;
   justify-content: center;
 }
 
 .TracksList {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
-  list-style-type: none;
-  margin: 0;
+  width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-content: space-between;
   padding: 0;
 }
 
@@ -32,12 +36,11 @@
   font-weight: 600;
   height: 158px;
   justify-content: center;
-  padding-top: 20px;
   text-align: center;
   transition-property: color, background-color, border-color;
   transition-duration: 400ms;
   transition-timing-function: ease-in-out;
-  width: 221px;
+  width: 250px;
 }
 
 .TracksListItem:nth-child(1) {
@@ -56,8 +59,8 @@
 }
 
 .TracksListItem:nth-child(4) {
-  border-color: var(--black);
-  color: var(--black);
+  border-color: green;
+    color: green;
 }
 
 .TracksListItem:nth-child(1):hover {
@@ -79,7 +82,125 @@
 }
 
 .TracksListItem:nth-child(4):hover {
-  background: var(--black);
+  background: green;
   border-color: var(--white);
   color: var(--white);
+}
+.TabTitle {
+  font-weight: bold;
+  font-size: medium;
+}
+
+.TabContentContainer {
+  padding-top: 20px;
+}
+
+.TrackSubtitle {
+  text-align: center;
+}
+
+.TimeContainer {
+  text-align: center;
+  font-weight: 500;
+  color: black;
+  height: 100%;
+  border-width: 1px;
+  border-radius: 10px;
+  border-color: black;
+  justify-content: center;
+  background-color: rgba(128, 128, 128, 0.121);
+}
+
+.CardDefault {
+  border-color: black;
+  border-width: 1px;
+  border-radius: 10px;
+  height: 100%;
+  justify-content: center;
+  background-color: rgba(128, 128, 128, 0.121);
+}
+
+.CardMobile {
+  border-color: rgba(0, 173, 242, 0.366);
+  border-width: 1px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  background-color: rgba(0, 174, 242, 0.068);
+}
+
+.CardCloud {
+  background-color: rgba(1, 124, 1, 0.466);
+  border-width: 1px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  background-color: rgba(1, 124, 1, 0.098);
+}
+
+.CardCarreira {
+  border-color: rgba(255, 0, 0, 0.421);
+  border-width: 1px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  background-color: rgba(255, 0, 0, 0.132);
+}
+
+.CardDevops {
+  border-color: rgba(102, 102, 2, 0.396);
+  border-width: 1px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 0, 0.192);
+}
+
+.EventTitle {
+  font-size: 1.1rem;
+  text-align: start;
+  font-weight: 700;
+}
+
+.CardTitleContainer {
+  justify-content: space-between;
+}
+
+.AvatarContainer {
+  height: 50px;
+  width: 50px;
+  margin-right: 10px;
+}
+
+.AvatarImg {
+  border-radius: 50%;
+  height: 100%;
+  border: 2px solid gainsboro;
+  border-radius: 50%;
+}
+
+.ExtraInfoContainer {
+  padding-top: 10px;
+  align-items: center;
+}
+
+.EventSpeaker {
+  text-align: start;
+}
+
+.ListTileTitle {
+  padding: 0;
+  margin: 0;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.ListTileSubtitle {
+  padding: 0;
+  margin: 0;
+  font-weight: 400;
+  color: rgb(74, 73, 73);
+}
+
+.DescriptionContainer {
+  padding: 20px 0 20px 0;
+}
+
+.BadgeStyle {
+  margin: 0px 0px 0px 10px;
 }
