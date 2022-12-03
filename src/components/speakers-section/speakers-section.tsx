@@ -12,7 +12,7 @@ import {
   Button,
   Badge,
 } from "reactstrap";
-import speakers from "../../hooks/useSpeakers";
+import { speakers } from "../../hooks/useSpeakers";
 import useWindowDimensions from "../../hooks/useWindowDimensions";
 
 import styles from "../../styles/Speakers.module.css";
@@ -60,7 +60,7 @@ const SpeakersSection: React.FC = ({}) => {
         <CarouselItem key={`${index}-carousel-item`}>
           <div className={styles.carousel_inner}>
             {speakersList.map((speaker: Speaker) => {
-              const _itemId: number = speaker.id;
+              const _itemId: string = speaker.name;
               return (
                 <Col
                   key={`${_itemId}-carousel-col`}

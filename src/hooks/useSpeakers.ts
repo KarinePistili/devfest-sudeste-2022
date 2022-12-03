@@ -1,90 +1,53 @@
-const speakers: any[] = [
-  // {
-  //   id: 1,
-  //   photo: 'https://firebasestorage.googleapis.com/v0/b/devfestcerrado2022.appspot.com/o/speakers%2Fjessica-costa.jpg?alt=media',
-  //   name: 'Jéssica Costa',
-  //   location: {
-  //     city: '',
-  //     uf: ''
-  //   },
-  //   topic: 'Machine Learning',
-  //   title: 'Google Developer Expert',
-  //   companyTitle: 'Analista de dados na Loggi'
-  // },
-  // {
-  //   id: 2,
-  //   photo: 'https://firebasestorage.googleapis.com/v0/b/devfestcerrado2022.appspot.com/o/speakers%2Fkeilla-menezes.png?alt=media',
-  //   name: 'Keilla Menezes',
-  //   location: {
-  //     city: '',
-  //     uf: ''
-  //   },
-  //   topic: 'Web',
-  //   title: 'Google Developer Expert',
-  //   companyTitle: 'Lead Software Engineer at Nubank'
-  // },
-  // {
-  //   id: 3,
-  //   photo: 'https://firebasestorage.googleapis.com/v0/b/devfestcerrado2022.appspot.com/o/speakers%2Farnaldo-gualberto.jpg?alt=media',
-  //   name: 'Arnaldo Gualberto',
-  //   location: {
-  //     city: '',
-  //     uf: ''
-  //   },
-  //   topic: 'Machine Learning',
-  //   title: 'Google Developer Expert',
-  //   companyTitle: 'Machine Learning Engineer at Clicampo'
-  // },
-  // {
-  //   id: 4,
-  //   photo: 'https://firebasestorage.googleapis.com/v0/b/devfestcerrado2022.appspot.com/o/speakers%2Fwilson-mendes.jpeg?alt=media',
-  //   name: 'Will Mendes',
-  //   location: {
-  //     city: '',
-  //     uf: ''
-  //   },
-  //   topic: 'Web',
-  //   title: 'Google Developer Expert',
-  //   companyTitle: 'Lead Software Engineer at Nubank'
-  // },
-  // {
-  //   id: 5,
-  //   photo: 'https://firebasestorage.googleapis.com/v0/b/devfestcerrado2022.appspot.com/o/speakers%2Ffellyph-cintra.jpeg?alt=media',
-  //   name: 'Fellyph Cintra',
-  //   location: {
-  //     city: '',
-  //     uf: ''
-  //   },
-  //   topic: 'Web',
-  //   title: 'Google Developer Expert',
-  //   companyTitle: 'Community Manager at rtCamp'
-  // },
-  // {
-  //   id: 6,
-  //   photo: 'https://firebasestorage.googleapis.com/v0/b/devfestcerrado2022.appspot.com/o/speakers%2Fmikaeri-ohana.jpeg?alt=media',
-  //   name: 'Mikaeri Ohana',
-  //   location: {
-  //     city: '',
-  //     uf: ''
-  //   },
-  //   topic: 'Machine Learning',
-  //   title: 'Google Developer Expert',
-  //   companyTitle: 'Data Product Manager at CI&T'
-  // },
-  /*{
-    id: 5,
-    photo: '',
-    name: 'Nelson Glauber',
-    location: {
-      city: '',
-      uf: ''
-    },
-    topic: 'Android',
-    title: 'Google Developer Expert',
-    companyTitle: 'Lead Software Engineer at Nubank'
-  },*/
+import { Speaker } from "../models/speaker";
 
-]
-
-
-export default speakers;
+export const speakers: Speaker[] = [
+  new Speaker(
+    "Alvaro Huanca",
+    "./speakers/alvarohuanca.jpeg",
+    "Developer Relations Engineer at Google Cloud"
+  ),
+  new Speaker("Convidado Especial", "./speakers/gdg.png", ""),
+  new Speaker("Organizadores de GDGs", "./speakers/gdg.png", ""),
+  new Speaker(
+    "Luís Leão",
+    "./speakers/luisleao.jpeg",
+    "Staff Developer Evangelist na Twilio"
+  ),
+  new Speaker("Filipe Nunes", "./speakers/gdg.png", "Software Engineer"),
+  new Speaker("Larissa Guimarães", "./speakers/gdg.png", ""),
+  new Speaker("Mariza Louise Pereira", "./speakers/gdg.png", ""),
+  new Speaker(
+    "Fernando Sedrez",
+    "./speakers/fernandosedrez.jpeg",
+    "Data Engineer | Big Data | GCP | Python"
+  ),
+  new Speaker(
+    "Sandro Moreira",
+    "./speakers/sandromoreira.jpg",
+    "Líder de comunidades em Goiás | Professor e Gestor de Tecnologia da Universidade de Rio Verde - UNIRV"
+  ),
+  new Speaker(
+    "Vinicius Caridá",
+    "./speakers/viniciuscarida.jpg",
+    "PhD Inteligência Artificial | GDE Machine Learning | Head de Plataformas de Atendimento Digital, PCP, WFM, Dados e IA"
+  ),
+  new Speaker('Rafael Brito Gomes "Gomex"', "./speakers/gdg.png", ""),
+  new Speaker("Rodolfo Teles", "./speakers/gdg.png", ""),
+  new Speaker(
+    "André Luiz Figueiredo de Castro",
+    "./speakers/andreluiz.jpeg",
+    "Engenheiro de Machine Learning"
+  ),
+  new Speaker("Gabriela Amâncio de Souza", "./speakers/gdg.png", ""),
+  new Speaker("Leticia Aparecida Coelho", "./speakers/gdg.png", ""),
+  new Speaker(
+    "Karine Paz Fagundes Cordeiro",
+    "./speakers/karinepaz.jpeg",
+    "Tech Lead de Plataforma em Take Blip | Co-autora do livro Jornada DevOps"
+  ),
+  new Speaker(
+    "Ana Carolina Barbosa Silva",
+    "./speakers/anacarolina.jpeg",
+    "Product Manager do Software Basement"
+  ),
+];

@@ -18,230 +18,14 @@ import {
 } from "reactstrap";
 
 import styles from "styles/Tracks.module.css";
+import { events } from "hooks/useEvents";
+import { Event } from "models/event";
 
 const Tracks: Record<string, string> = {
   mobile: "Mobile",
   carreiras: "Carreira",
   devops: "Infra e DevOps",
   cloud: "Cloud",
-};
-
-class Speaker {
-  name: string;
-  img: string;
-  job: string;
-
-  constructor(name: string, img: string, job: string) {
-    this.name = name;
-    this.img = img;
-    this.job = job;
-  }
-}
-
-class Event {
-  title: string;
-  speakers: Speaker[];
-  description: string;
-  track: string;
-  isActive: boolean;
-
-  constructor(
-    title: string,
-    speakers: Speaker[],
-    description: string,
-    track: string,
-    isActive: boolean
-  ) {
-    this.title = title;
-    this.speakers = speakers;
-    this.description = description;
-    this.track = track;
-    this.isActive = isActive;
-  }
-}
-
-const Events = {
-  regular: [
-    new Event(
-      "The State of DevOps: Security Enables Velocity",
-      [
-        new Speaker(
-          "Alvaro Huanca",
-          "./speakers/alvarohuanca.jpeg",
-          "Developer Relations Engineer at Google Cloud"
-        ),
-      ],
-      "Alvaro trabalha no Google Cloud como Developer Relations Engineer. Abordará o seguinte questionamento: Podemos enfrentar os desafios de segurança sem diminuir nossa velocidade de entrega de software?",
-      "sala principal",
-      false
-    ),
-    new Event(
-      "Em breve!",
-      [new Speaker("Convidado Especial", "./speakers/gdg.png", "")],
-      "Em breve mais informações!",
-      "sala principal",
-      false
-    ),
-    new Event(
-      "Mesa Redonda: O Poder das Comunidades Google",
-      [
-        new Speaker("Organizadores de GDGs", "./speakers/gdg.png", ""),
-        // new Speaker(
-        //   "Fernanda Costa",
-        //   "https://cdn-icons-png.flaticon.com/512/5526/5526465.png",
-        //   "Mediadora"
-        // ),
-      ],
-      "Em breve mais informações!",
-      "sala principal",
-      false
-    ),
-    new Event(
-      "Novidades e Últimos Lançamentos do Firebase",
-      [
-        new Speaker(
-          "Luís Leão",
-          "./speakers/luisleao.jpeg",
-          "Staff Developer Evangelist na Twilio"
-        ),
-      ],
-      "Leão é desenvolvedor na Twilio e vai apresentar nesta palestra as novidades do Firebase e ver ao vivo algumas implementações para que você possa tirar o máximo da plataforma e aprender como deixá-la mais segura.",
-      "sala principal",
-      false
-    ),
-  ],
-  mobile: [
-    new Event(
-      "A magia do Firebase em seus Apps",
-      [new Speaker("Filipe Nunes", "./speakers/gdg.png", "Software Engineer")],
-      "Filipe é Android Software Engineer e sua ideia é percorrer os principais recursos Firebase para o contexto mobile, entender as formas de aplicá-los, como usá-los e claro como não usá-los",
-      "mobile",
-      false
-    ),
-    new Event(
-      "Novidades sobre acessibilidade no Android",
-      [new Speaker("Larissa Guimarães", "./speakers/gdg.png", "")],
-      "Em breve mais informações!",
-      "mobile",
-      false
-    ),
-    new Event(
-      "Conceitos de Arquitetura de Projetos no Flutter",
-      [new Speaker("Mariza Louise Pereira", "./speakers/gdg.png", "")],
-      "Em breve mais informações!",
-      "mobile",
-      false
-    ),
-  ],
-  cloud: [
-    new Event(
-      "Eleições Presidenciais: Usando Google Cloud para acompanhar a apuração",
-      [
-        new Speaker(
-          "Fernando Sedrez",
-          "./speakers/fernandosedrez.jpeg",
-          "Data Engineer | Big Data | GCP | Python"
-        ),
-      ],
-      "Fernando Sedrez é engenheiro de dados. Nessa palestra vamos explorar como montar um sistema com serviços do Google Cloud, e usaremos as informações da apuração das eleições disponibilizadas pelo TSE.",
-      "cloud",
-      false
-    ),
-    new Event(
-      "Criando sua Própria Inteligência Artificial com Google Vertex AI",
-      [
-        new Speaker(
-          "Sandro Moreira",
-          "./speakers/sandromoreira.jpg",
-          "Líder de comunidades em Goiás | Professor e Gestor de Tecnologia da Universidade de Rio Verde - UNIRV"
-        ),
-      ],
-      "Sandro é líder de comunidades em Goiás e Professor e Gestor de Tecnologia da Universidade de Rio Verde - UNIRV. Iremos criar um projeto com Google Vertex AI, fazendo coleta de dados, treinamento, teste e deploy sem necessidade de escrever nenhuma linha de código.",
-      "cloud",
-      false
-    ),
-    new Event(
-      "Aplicação de redes neurais convolucionais (CNN) na classificação de imagens com Tensorflow/Keras ",
-      [
-        new Speaker(
-          "Vinicius Caridá",
-          "./speakers/viniciuscarida.jpg",
-          "PhD Inteligência Artificial | GDE Machine Learning | Head de Plataformas de Atendimento Digital, PCP, WFM, Dados e IA"
-        ),
-      ],
-      "Vinícius é Doutor em Inteligência Artificial, GDE Machine Learning e Head de Plataformas de Atendimento Digital, PCP, WFM, Dados e IA do maior banco do hemisfério sul. Nessa palestra vai mostrar como as CNNs funcionam e como o Tensorflow/keras facilita na criação dessas redes.",
-      "cloud",
-      false
-    ),
-  ],
-  devops: [
-    new Event(
-      "Infraestrutura como produto - Deixando de ser um balcão de demandas",
-      [new Speaker('Rafael Brito Gomes "Gomex"', "./speakers/gdg.png", "")],
-      "Em breve mais informações!",
-      "devops/infra",
-      false
-    ),
-    new Event(
-      "MLOPS",
-      [new Speaker("Rodolfo Teles", "./speakers/gdg.png", "")],
-      "Em breve mais informações!",
-      "devops/infra",
-      false
-    ),
-    new Event(
-      "Teste suas DAGs: boas práticas para usar o Cloud Composer",
-      [
-        new Speaker(
-          "André Luiz Figueiredo de Castro",
-          "./speakers/andreluiz.jpeg",
-          "Engenheiro de Machine Learning"
-        ),
-      ],
-      "André é Engenheiro de Machine Learning. Apresentará boas práticas de DevOps para times de Engenharia de Dados, mostrando os conceitos de testes, Airflow, Composer e boas práticas. ",
-      "devops/infra",
-      false
-    ),
-  ],
-  carreira: [
-    new Event(
-      "Processos seletivos na área tech: por onde começar?",
-      [
-        new Speaker("Gabriela Amâncio de Souza", "./speakers/gdg.png", ""),
-
-        new Speaker("Leticia Aparecida Coelho", "./speakers/gdg.png", ""),
-      ],
-      "Em breve mais informações!",
-      "carreira",
-      false
-    ),
-    new Event(
-      "Mulher Tech Lead: O que a literatura não nos ensina",
-      [
-        new Speaker(
-          "Karine Paz Fagundes Cordeiro",
-          "./speakers/karinepaz.jpeg",
-          "Tech Lead de Plataforma em Take Blip | Co-autora do livro Jornada DevOps"
-        ),
-      ],
-      "Karine é  Tech Lead de Plataforma em Take Blip e co-autora do livro Jornada Devops. Nesta palestra vou abordar algumas situações que vivi e o que aprendi com elas nessa trajetória de Mulher Líder Técnica.",
-      "carreira",
-      false
-    ),
-    new Event(
-      "Como avaliar uma proposta salarial com equity (Stock options, Ações restritas)",
-      [
-        new Speaker(
-          "Ana Carolina Barbosa Silva",
-          "./speakers/anacarolina.jpeg",
-          "Product Manager do Software Basement"
-        ),
-      ],
-      "Ana é Product Manager de um software para controle de incentivos chamado Basement, e vai explicar o que é um incentivo de longo prazo,mostrando como avaliar uma proposta salarial, benefícios, e seu real valor para tomar a melhor decisão.",
-      "carreira",
-      false
-    ),
-  ],
 };
 
 function CardSection(props: {
@@ -422,13 +206,13 @@ const TracksSection: React.FC = ({}) => {
               <Container className={styles.TabContentContainer}>
                 <Row className={styles.TabContentContainer}>
                   <Col sm="2">
-                    <TimeSection startTime="17:00" endTime="18:00" />
+                    <TimeSection startTime="20:00" endTime="21:00" />
                   </Col>
                   <Col>
                     <CardSection
                       trackColor="dark"
                       styleClass={"CardDefault"}
-                      event={Events.regular[3]}
+                      event={events.regular[3]}
                     />
                   </Col>
                 </Row>
@@ -444,7 +228,7 @@ const TracksSection: React.FC = ({}) => {
                     <CardSection
                       trackColor="dark"
                       styleClass={"CardDefault"}
-                      event={Events.regular[0]}
+                      event={events.regular[0]}
                     />
                   </Col>
                 </Row>
@@ -457,22 +241,22 @@ const TracksSection: React.FC = ({}) => {
                     <CardSection
                       trackColor="primary"
                       styleClass={"CardMobile"}
-                      event={Events.mobile[0]}
+                      event={events.mobile[0]}
                     />
                     <CardSection
                       trackColor="danger"
                       styleClass={"CardCarreira"}
-                      event={Events.carreira[0]}
+                      event={events.carreira[0]}
                     />
                     <CardSection
                       trackColor="success"
                       styleClass={"CardCloud"}
-                      event={Events.cloud[0]}
+                      event={events.cloud[0]}
                     />
                     <CardSection
                       trackColor="warning"
                       styleClass={"CardDevops"}
-                      event={Events.devops[0]}
+                      event={events.devops[0]}
                     />
                   </Col>
                 </Row>
@@ -485,22 +269,22 @@ const TracksSection: React.FC = ({}) => {
                     <CardSection
                       trackColor="primary"
                       styleClass={"CardMobile"}
-                      event={Events.mobile[1]}
+                      event={events.mobile[1]}
                     />
                     <CardSection
                       trackColor="danger"
                       styleClass={"CardCarreira"}
-                      event={Events.carreira[1]}
+                      event={events.carreira[1]}
                     />
                     <CardSection
                       trackColor="success"
                       styleClass={"CardCloud"}
-                      event={Events.cloud[1]}
+                      event={events.cloud[1]}
                     />
                     <CardSection
                       trackColor="warning"
                       styleClass={"CardDevops"}
-                      event={Events.devops[1]}
+                      event={events.devops[1]}
                     />
                   </Col>
                 </Row>
@@ -512,22 +296,22 @@ const TracksSection: React.FC = ({}) => {
                     <CardSection
                       trackColor="primary"
                       styleClass={"CardMobile"}
-                      event={Events.mobile[2]}
+                      event={events.mobile[2]}
                     />
                     <CardSection
                       trackColor="danger"
                       styleClass={"CardCarreira"}
-                      event={Events.carreira[2]}
+                      event={events.carreira[2]}
                     />
                     <CardSection
                       trackColor="success"
                       styleClass={"CardCloud"}
-                      event={Events.cloud[2]}
+                      event={events.cloud[2]}
                     />
                     <CardSection
                       trackColor="warning"
                       styleClass={"CardDevops"}
-                      event={Events.devops[2]}
+                      event={events.devops[2]}
                     />
                   </Col>
                 </Row>
@@ -540,7 +324,7 @@ const TracksSection: React.FC = ({}) => {
                     <CardSection
                       trackColor="dark"
                       styleClass={"CardDefault"}
-                      event={Events.regular[1]}
+                      event={events.regular[1]}
                     />
                   </Col>
                 </Row>
@@ -553,7 +337,7 @@ const TracksSection: React.FC = ({}) => {
                     <CardSection
                       trackColor="dark"
                       styleClass={"CardDefault"}
-                      event={Events.regular[2]}
+                      event={events.regular[2]}
                     />
                   </Col>
                 </Row>
