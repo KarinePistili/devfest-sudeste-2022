@@ -89,10 +89,12 @@
 .TabTitle {
   font-weight: bold;
   font-size: medium;
+  cursor: pointer;
 }
 
 .TabContentContainer {
   padding-top: 20px;
+  cursor: pointer;
 }
 
 .TrackSubtitle {
