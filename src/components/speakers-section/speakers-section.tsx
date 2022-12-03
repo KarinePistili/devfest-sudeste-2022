@@ -90,7 +90,7 @@ const SpeakersSection: React.FC = ({}) => {
             além de conhecimento técnico, contando com muita interatividade,
             conexões e diversidade.
           </p>
-          <div className={styles.cards}>
+          {/* <div className={styles.cards}>
             <Carousel
               activeIndex={activeIndex}
               next={next}
@@ -105,7 +105,7 @@ const SpeakersSection: React.FC = ({}) => {
             <a color="info" href="/speakers">
               Ver todos
             </a>
-          </div>
+          </div> */}
 
           <h2 className={styles.CallForPapersTitle}>Call for Papers</h2>
           <p className={styles.Description}>
