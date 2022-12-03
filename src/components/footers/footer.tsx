@@ -13,22 +13,22 @@ const Footer: React.FC<FooterProps> = ({ }) => {
       <Container fluid>
         <Nav className={styles.FooterContent}>
           <NavItem>
-            <NavLink active href="#">
+            <NavLink active href="/#">
               <LogoGDG />
             </NavLink>
           </NavItem>
           <NavItem>
-            <NavLink href="#speakers">Palestrantes</NavLink>
+            <NavLink href="/#speakers">Palestrantes</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink href="#sponsors">Patrocinadores</NavLink>
+            <NavLink href="/#sponsors">Patrocinadores</NavLink>
           </NavItem>
 
           <NavItem>
-            <NavLink href="#agenda">Agenda</NavLink>
+            <NavLink href="/#agenda">Agenda</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink href="#sponsors">Organização</NavLink>
+            <NavLink href="/#sponsors">Organização</NavLink>
           </NavItem>
           <NavItem className={styles.FooterRegister}>
             <NavLink href={configValues.eventLinkRegistrationUrl}>
