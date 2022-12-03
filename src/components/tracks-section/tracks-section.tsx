@@ -378,14 +378,14 @@ const TracksSection: React.FC = ({}) => {
       </Container>
       <Container>
         <section className={styles.Tracks}>
-          <ul className={styles.TracksList}>
+          <Row className={styles.TracksList}>
             {Object.keys(Tracks).map((key) => (
-              <li className={styles.TracksListItem} key={key}>
+              <Col className={styles.TracksListItem} key={key}>
                 <span className={styles.TracksListItem__text}></span>
                 {Tracks[key]}
-              </li>
+              </Col>
             ))}
-          </ul>
+          </Row>
         </section>
       </Container>
       <Container id="agenda">
