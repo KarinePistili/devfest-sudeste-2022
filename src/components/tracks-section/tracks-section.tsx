@@ -422,7 +422,7 @@ const TracksSection: React.FC = ({}) => {
               <Container className={styles.TabContentContainer}>
                 <Row className={styles.TabContentContainer}>
                   <Col sm="2">
-                    <TimeSection startTime="17:00" endTime="18:00" />
+                    <TimeSection startTime="20:00" endTime="21:00" />
                   </Col>
                   <Col>
                     <CardSection
