@@ -26,30 +26,36 @@ const Tracks: Record<string, string> = {
   cloud: "Cloud",
 };
 
+class Speaker {
+  name: string;
+  img: string;
+  job: string;
+
+  constructor(name: string, img: string, job: string) {
+    this.name = name;
+    this.img = img;
+    this.job = job;
+  }
+}
+
 class Event {
   title: string;
-  speakerName: string;
+  speakers: Speaker[];
   description: string;
-  speakerJob: string;
-  speakerImg: string;
   track: string;
   isActive: boolean;
 
   constructor(
     title: string,
-    speakerName: string,
-    speakerImg: string,
+    speakers: Speaker[],
     description: string,
-    speakerJob: string,
     track: string,
     isActive: boolean
   ) {
     this.title = title;
-    this.speakerName = speakerName;
+    this.speakers = speakers;
     this.description = description;
-    this.speakerJob = speakerJob;
     this.track = track;
-    this.speakerImg = speakerImg;
     this.isActive = isActive;
   }
 }
@@ -58,37 +64,48 @@ const Events = {
   regular: [
     new Event(
       "The State of DevOps: Security Enables Velocity",
-      "Alvaro Huanca",
-      "https://cdn-icons-png.flaticon.com/512/5526/5526465.png",
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent porttitor dapibus sapien, id iaculis elit dapibus ac. Phasellus tempus orci molestie libero malesuada laoreet. In in maximus sapien, sit amet aliquam neque. Maecenas sed arcu ac quam pellentesque commodo eget eget diam",
-      "XXXXXXXXXXXXXXX",
+      [
+        new Speaker(
+          "Alvaro Huanca",
+          "./speakers/alvarohuanca.jpeg",
+          "Developer Relations Engineer at Google Cloud"
+        ),
+      ],
+      "Alvaro trabalha no Google Cloud como Developer Relations Engineer. Abordará o seguinte questionamento: Podemos enfrentar os desafios de segurança sem diminuir nossa velocidade de entrega de software?",
       "sala principal",
       false
     ),
     new Event(
-      "(Surpresa)",
-      "Luciano",
-      "https://cdn-icons-png.flaticon.com/512/5526/5526465.png",
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent porttitor dapibus sapien, id iaculis elit dapibus ac. Phasellus tempus orci molestie libero malesuada laoreet. In in maximus sapien, sit amet aliquam neque. Maecenas sed arcu ac quam pellentesque commodo eget eget diam",
-      "XXXXXXXXXXXXXXX",
+      "Em breve!",
+      [new Speaker("Convidado Especial", "./speakers/gdg.png", "")],
+      "Em breve mais informações!",
       "sala principal",
       false
     ),
     new Event(
       "Mesa Redonda: O Poder das Comunidades Google",
-      "Organizadores de GDGs e Fernanda (Mediadora)",
-      "https://cdn-icons-png.flaticon.com/512/5526/5526465.png",
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent porttitor dapibus sapien, id iaculis elit dapibus ac. Phasellus tempus orci molestie libero malesuada laoreet. In in maximus sapien, sit amet aliquam neque. Maecenas sed arcu ac quam pellentesque commodo eget eget diam",
-      "XXXXXXXXXXXXXXX",
+      [
+        new Speaker("Organizadores de GDGs", "./speakers/gdg.png", ""),
+        // new Speaker(
+        //   "Fernanda Costa",
+        //   "https://cdn-icons-png.flaticon.com/512/5526/5526465.png",
+        //   "Mediadora"
+        // ),
+      ],
+      "Em breve mais informações!",
       "sala principal",
       false
     ),
     new Event(
       "Novidades e Últimos Lançamentos do Firebase",
-      "Luis Leão",
-      "https://cdn-icons-png.flaticon.com/512/5526/5526465.png",
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent porttitor dapibus sapien, id iaculis elit dapibus ac. Phasellus tempus orci molestie libero malesuada laoreet. In in maximus sapien, sit amet aliquam neque. Maecenas sed arcu ac quam pellentesque commodo eget eget diam",
-      "XXXXXXXXXXXXXXX",
+      [
+        new Speaker(
+          "Luís Leão",
+          "./speakers/luisleao.jpeg",
+          "Staff Developer Evangelist na Twilio"
+        ),
+      ],
+      "Leão é desenvolvedor na Twilio e vai apresentar nesta palestra as novidades do Firebase e ver ao vivo algumas implementações para que você possa tirar o máximo da plataforma e aprender como deixá-la mais segura.",
       "sala principal",
       false
     ),
@@ -96,30 +113,22 @@ const Events = {
   mobile: [
     new Event(
       "A magia do Firebase em seus Apps",
-      "Filipe Nunes",
-      "https://cdn-icons-png.flaticon.com/512/5526/5526465.png",
-
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent porttitor dapibus sapien, id iaculis elit dapibus ac. Phasellus tempus orci molestie libero malesuada laoreet. In in maximus sapien, sit amet aliquam neque. Maecenas sed arcu ac quam pellentesque commodo eget eget diam",
-      "XXXXXXXXXXXXXXX",
+      [new Speaker("Filipe Nunes", "./speakers/gdg.png", "Software Engineer")],
+      "Filipe é Android Software Engineer e sua ideia é percorrer os principais recursos Firebase para o contexto mobile, entender as formas de aplicá-los, como usá-los e claro como não usá-los",
       "mobile",
       false
     ),
     new Event(
       "Novidades sobre acessibilidade no Android",
-      "Larissa Guimarães",
-      "https://cdn-icons-png.flaticon.com/512/5526/5526465.png",
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent porttitor dapibus sapien, id iaculis elit dapibus ac. Phasellus tempus orci molestie libero malesuada laoreet. In in maximus sapien, sit amet aliquam neque. Maecenas sed arcu ac quam pellentesque commodo eget eget diam",
-      "XXXXXXXXXXXXXXX",
+      [new Speaker("Larissa Guimarães", "./speakers/gdg.png", "")],
+      "Em breve mais informações!",
       "mobile",
       false
     ),
     new Event(
       "Conceitos de Arquitetura de Projetos no Flutter",
-      "Mariza Louise Pereira",
-      "https://cdn-icons-png.flaticon.com/512/5526/5526465.png",
-
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent porttitor dapibus sapien, id iaculis elit dapibus ac. Phasellus tempus orci molestie libero malesuada laoreet. In in maximus sapien, sit amet aliquam neque. Maecenas sed arcu ac quam pellentesque commodo eget eget diam",
-      "XXXXXXXXXXXXXXX",
+      [new Speaker("Mariza Louise Pereira", "./speakers/gdg.png", "")],
+      "Em breve mais informações!",
       "mobile",
       false
     ),
@@ -127,91 +136,109 @@ const Events = {
   cloud: [
     new Event(
       "Eleições Presidenciais: Usando Google Cloud para acompanhar a apuração",
-      "Fernando Sedrez",
-      "https://cdn-icons-png.flaticon.com/512/5526/5526465.png",
-
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent porttitor dapibus sapien, id iaculis elit dapibus ac. Phasellus tempus orci molestie libero malesuada laoreet. In in maximus sapien, sit amet aliquam neque. Maecenas sed arcu ac quam pellentesque commodo eget eget diam",
-      "XXXXXXXXXXXXXXX",
+      [
+        new Speaker(
+          "Fernando Sedrez",
+          "./speakers/fernandosedrez.jpeg",
+          "Data Engineer | Big Data | GCP | Python"
+        ),
+      ],
+      "Fernando Sedrez é engenheiro de dados. Nessa palestra vamos explorar como montar um sistema com serviços do Google Cloud, e usaremos as informações da apuração das eleições disponibilizadas pelo TSE.",
       "cloud",
       false
     ),
     new Event(
       "Criando sua Própria Inteligência Artificial com Google Vertex AI",
-      "Sandro Moreira",
-      "https://cdn-icons-png.flaticon.com/512/5526/5526465.png",
-
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent porttitor dapibus sapien, id iaculis elit dapibus ac. Phasellus tempus orci molestie libero malesuada laoreet. In in maximus sapien, sit amet aliquam neque. Maecenas sed arcu ac quam pellentesque commodo eget eget diam",
-      "XXXXXXXXXXXXXXX",
+      [
+        new Speaker(
+          "Sandro Moreira",
+          "./speakers/sandromoreira.jpg",
+          "Líder de comunidades em Goiás | Professor e Gestor de Tecnologia da Universidade de Rio Verde - UNIRV"
+        ),
+      ],
+      "Sandro é líder de comunidades em Goiás e Professor e Gestor de Tecnologia da Universidade de Rio Verde - UNIRV. Iremos criar um projeto com Google Vertex AI, fazendo coleta de dados, treinamento, teste e deploy sem necessidade de escrever nenhuma linha de código.",
       "cloud",
       false
     ),
     new Event(
       "Aplicação de redes neurais convolucionais (CNN) na classificação de imagens com Tensorflow/Keras ",
-      "Vinicius Caridá",
-      "https://cdn-icons-png.flaticon.com/512/5526/5526465.png",
-
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent porttitor dapibus sapien, id iaculis elit dapibus ac. Phasellus tempus orci molestie libero malesuada laoreet. In in maximus sapien, sit amet aliquam neque. Maecenas sed arcu ac quam pellentesque commodo eget eget diam",
-      "XXXXXXXXXXXXXXX",
+      [
+        new Speaker(
+          "Vinicius Caridá",
+          "./speakers/viniciuscarida.jpg",
+          "PhD Inteligência Artificial | GDE Machine Learning | Head de Plataformas de Atendimento Digital, PCP, WFM, Dados e IA"
+        ),
+      ],
+      "Vinícius é Doutor em Inteligência Artificial, GDE Machine Learning e Head de Plataformas de Atendimento Digital, PCP, WFM, Dados e IA do maior banco do hemisfério sul. Nessa palestra vai mostrar como as CNNs funcionam e como o Tensorflow/keras facilita na criação dessas redes.",
       "cloud",
-      false
-    ),
-  ],
-  carreira: [
-    new Event(
-      "Infraestrutura como produto - Deixando de ser um balcão de demandas",
-      'Rafael Brito Gomes "Gomex"',
-      "https://cdn-icons-png.flaticon.com/512/5526/5526465.png",
-
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent porttitor dapibus sapien, id iaculis elit dapibus ac. Phasellus tempus orci molestie libero malesuada laoreet. In in maximus sapien, sit amet aliquam neque. Maecenas sed arcu ac quam pellentesque commodo eget eget diam",
-      "XXXXXXXXXXXXXXX",
-      "carreira",
-      false
-    ),
-    new Event(
-      "MLOPS",
-      "Rodolfo Teles",
-      "https://cdn-icons-png.flaticon.com/512/5526/5526465.png",
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent porttitor dapibus sapien, id iaculis elit dapibus ac. Phasellus tempus orci molestie libero malesuada laoreet. In in maximus sapien, sit amet aliquam neque. Maecenas sed arcu ac quam pellentesque commodo eget eget diam",
-      "XXXXXXXXXXXXXXX",
-      "carreira",
-      false
-    ),
-    new Event(
-      "Teste suas DAGs: boas práticas para usar o Cloud Composer",
-      "André Luiz Figueiredo de Castro",
-      "https://cdn-icons-png.flaticon.com/512/5526/5526465.png",
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent porttitor dapibus sapien, id iaculis elit dapibus ac. Phasellus tempus orci molestie libero malesuada laoreet. In in maximus sapien, sit amet aliquam neque. Maecenas sed arcu ac quam pellentesque commodo eget eget diam",
-      "XXXXXXXXXXXXXXX",
-      "carreira",
       false
     ),
   ],
   devops: [
     new Event(
-      "Processos seletivos na área tech: por onde começar?",
-      "Gabriela Amâncio de Souza e Leticia Aparecida Coelho",
-      "https://cdn-icons-png.flaticon.com/512/5526/5526465.png",
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent porttitor dapibus sapien, id iaculis elit dapibus ac. Phasellus tempus orci molestie libero malesuada laoreet. In in maximus sapien, sit amet aliquam neque. Maecenas sed arcu ac quam pellentesque commodo eget eget diam",
-      "XXXXXXXXXXXXXXX",
+      "Infraestrutura como produto - Deixando de ser um balcão de demandas",
+      [new Speaker('Rafael Brito Gomes "Gomex"', "./speakers/gdg.png", "")],
+      "Em breve mais informações!",
       "devops/infra",
+      false
+    ),
+    new Event(
+      "MLOPS",
+      [new Speaker("Rodolfo Teles", "./speakers/gdg.png", "")],
+      "Em breve mais informações!",
+      "devops/infra",
+      false
+    ),
+    new Event(
+      "Teste suas DAGs: boas práticas para usar o Cloud Composer",
+      [
+        new Speaker(
+          "André Luiz Figueiredo de Castro",
+          "./speakers/andreluiz.jpeg",
+          "Engenheiro de Machine Learning"
+        ),
+      ],
+      "André é Engenheiro de Machine Learning. Apresentará boas práticas de DevOps para times de Engenharia de Dados, mostrando os conceitos de testes, Airflow, Composer e boas práticas. ",
+      "devops/infra",
+      false
+    ),
+  ],
+  carreira: [
+    new Event(
+      "Processos seletivos na área tech: por onde começar?",
+      [
+        new Speaker("Gabriela Amâncio de Souza", "./speakers/gdg.png", ""),
+
+        new Speaker("Leticia Aparecida Coelho", "./speakers/gdg.png", ""),
+      ],
+      "Em breve mais informações!",
+      "carreira",
       false
     ),
     new Event(
       "Mulher Tech Lead: O que a literatura não nos ensina",
-      "Karine Paz Fagundes Cordeiro",
-      "https://cdn-icons-png.flaticon.com/512/5526/5526465.png",
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent porttitor dapibus sapien, id iaculis elit dapibus ac. Phasellus tempus orci molestie libero malesuada laoreet. In in maximus sapien, sit amet aliquam neque. Maecenas sed arcu ac quam pellentesque commodo eget eget diam",
-      "XXXXXXXXXXXXXXX",
-      "devops/infra",
+      [
+        new Speaker(
+          "Karine Paz Fagundes Cordeiro",
+          "./speakers/karinepaz.jpeg",
+          "Tech Lead de Plataforma em Take Blip | Co-autora do livro Jornada DevOps"
+        ),
+      ],
+      "Karine é  Tech Lead de Plataforma em Take Blip e co-autora do livro Jornada Devops. Nesta palestra vou abordar algumas situações que vivi e o que aprendi com elas nessa trajetória de Mulher Líder Técnica.",
+      "carreira",
       false
     ),
     new Event(
       "Como avaliar uma proposta salarial com equity (Stock options, Ações restritas)",
-      "Ana Carolina Barbosa Silva",
-      "https://cdn-icons-png.flaticon.com/512/5526/5526465.png",
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent porttitor dapibus sapien, id iaculis elit dapibus ac. Phasellus tempus orci molestie libero malesuada laoreet. In in maximus sapien, sit amet aliquam neque. Maecenas sed arcu ac quam pellentesque commodo eget eget diam",
-      "XXXXXXXXXXXXXXX",
-      "devops/infra",
+      [
+        new Speaker(
+          "Ana Carolina Barbosa Silva",
+          "./speakers/anacarolina.jpeg",
+          "Product Manager do Software Basement"
+        ),
+      ],
+      "Ana é Product Manager de um software para controle de incentivos chamado Basement, e vai explicar o que é um incentivo de longo prazo,mostrando como avaliar uma proposta salarial, benefícios, e seu real valor para tomar a melhor decisão.",
+      "carreira",
       false
     ),
   ],
@@ -242,14 +269,15 @@ function CardSection(props: {
             </CardTitle>
 
             {active == false && (
-              <>
-                <CardText className={styles.EventSpeaker}>
-                  Com {props.event.speakerName}
-                  <Badge className={styles.BadgeStyle} color={props.trackColor}>
-                    {props.event.track}
-                  </Badge>
-                </CardText>
-              </>
+              <CardText className={styles.EventSpeaker}>
+                <span>Com {props.event.speakers[0].name}</span>
+                {props.event.speakers[1] && (
+                  <span> e {props.event.speakers[1].name}</span>
+                )}
+                <Badge className={styles.BadgeStyle} color={props.trackColor}>
+                  {props.event.track}
+                </Badge>
+              </CardText>
             )}
             {active == true && (
               <CardText className={styles.DescriptionContainer}>
@@ -276,15 +304,15 @@ function CardSection(props: {
               <div className={styles.AvatarContainer}>
                 <img
                   className={styles.AvatarImg}
-                  src={props.event.speakerImg}
+                  src={props.event.speakers[0].img}
                 ></img>
               </div>
               <Col>
                 <CardTitle className={styles.ListTileTitle}>
-                  {props.event.speakerName}
+                  {props.event.speakers[0].name}
                 </CardTitle>
                 <CardText className={styles.ListTileSubtitle}>
-                  {props.event.speakerJob}
+                  {props.event.speakers[0].job}
                 </CardText>
               </Col>
 
@@ -294,6 +322,24 @@ function CardSection(props: {
                 </Badge>
               </Col>
             </Row>
+            {props.event.speakers[1] && (
+              <Row className={styles.ExtraInfoContainer}>
+                <div className={styles.AvatarContainer}>
+                  <img
+                    className={styles.AvatarImg}
+                    src={props.event.speakers[1].img}
+                  ></img>
+                </div>
+                <Col>
+                  <CardTitle className={styles.ListTileTitle}>
+                    {props.event.speakers[1].name}
+                  </CardTitle>
+                  <CardText className={styles.ListTileSubtitle}>
+                    {props.event.speakers[1].job}
+                  </CardText>
+                </Col>
+              </Row>
+            )}
           </>
         )}
       </Card>
