@@ -17,11 +17,11 @@ const NavbarHome = () => {
   const [isScrolling, setScrolling] = useState(false);
 
   const menu = [
-    { name: "Sobre", ref: "#about" },
-    { name: "Trilhas", ref: "#tracks" },
-    { name: "Agenda", ref: "#agenda" },
-    { name: "Palestrantes", ref: "#speakers" },
-    { name: "Patrocinadores", ref: "#sponsors" },
+    { name: "Sobre", ref: "/#about" },
+    { name: "Trilhas", ref: "/#tracks" },
+    { name: "Agenda", ref: "/#agenda" },
+    { name: "Palestrantes", ref: "/#speakers" },
+    { name: "Patrocinadores", ref: "/#sponsors" },
   ];
 
   const toggle = () => setIsOpen(!isOpen);
