@@ -112,3 +112,7 @@
   align-items: center;
   justify-content: center;
 }
+.BadgeStyle {
+  margin: 20px 0px 0px 0px;
+  font-size: 20px;
+}
