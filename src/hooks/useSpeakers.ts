@@ -6,16 +6,16 @@ export const speakers: Speaker[] = [
     "./speakers/alvarohuanca.jpeg",
     "Developer Relations Engineer at Google Cloud"
   ),
-  new Speaker("Convidado Especial", "./speakers/gdg.png", ""),
+  new Speaker("Luciano Martins", "./speakers/lucianomartins.png", "Developer Advocate at Google | Machine Learning Specialist"),
   new Speaker("Organizadores de GDGs", "./speakers/gdg.png", ""),
   new Speaker(
     "Luís Leão",
-    "./speakers/luisleao.jpeg",
+    "./speakers/luisleao.png",
     "Staff Developer Evangelist na Twilio"
   ),
-  new Speaker("Filipe Nunes", "./speakers/gdg.png", "Software Engineer"),
-  new Speaker("Larissa Guimarães", "./speakers/gdg.png", ""),
-  new Speaker("Mariza Louise Pereira", "./speakers/gdg.png", ""),
+  new Speaker("Filipe Nunes", "./speakers/gdg.png", "Android Software Engineer"),
+  new Speaker("Larissa Guimarães", "./speakers/gdg.png", "Formada em Sistemas de Informação | Dev Android"),
+  new Speaker("Maiza Louise Pereira", "./speakers/maizalouise.png", "Desenvolvedora Flutter | Formada em Tecnologia em Banco de Dados"),
   new Speaker(
     "Fernando Sedrez",
     "./speakers/fernandosedrez.jpeg",
@@ -23,23 +23,23 @@ export const speakers: Speaker[] = [
   ),
   new Speaker(
     "Sandro Moreira",
-    "./speakers/sandromoreira.jpg",
+    "./speakers/sandromoreira.png",
     "Líder de comunidades em Goiás | Professor e Gestor de Tecnologia da Universidade de Rio Verde - UNIRV"
   ),
   new Speaker(
     "Vinicius Caridá",
-    "./speakers/viniciuscarida.jpg",
-    "PhD Inteligência Artificial | GDE Machine Learning | Head de Plataformas de Atendimento Digital, PCP, WFM, Dados e IA"
+    "./speakers/viniciuscarida.png",
+    "PhD Inteligência Artificial | GDE Machine Learning | Head de Plataformas de Atendimento Digital"
   ),
-  new Speaker('Rafael Brito Gomes "Gomex"', "./speakers/gdg.png", ""),
-  new Speaker("Rodolfo Teles", "./speakers/gdg.png", ""),
+  new Speaker('Rafael Brito Gomes "Gomex"', "./speakers/rafaelbrito.jpg", "DNSFilter | Fundador da Mentoria de IaC | Escritor"),
+  new Speaker("Rodolfo Teles", "./speakers/gdg.png", "Engenheiro de Machine Learning"),
   new Speaker(
     "André Luiz Figueiredo de Castro",
     "./speakers/andreluiz.jpeg",
     "Engenheiro de Machine Learning"
   ),
-  new Speaker("Gabriela Amâncio de Souza", "./speakers/gdg.png", ""),
-  new Speaker("Leticia Aparecida Coelho", "./speakers/gdg.png", ""),
+  new Speaker("Gabriela Amâncio de Souza", "./speakers/gabrielaamancio.png", "Psicóloga Especialista em Gestão de Talentos e Carreiras | Nubank"),
+  new Speaker("Leticia Aparecida Coelho", "./speakers/leticiaaparecida.jpeg", "Software Engineer na ArcTouch | Criadora de conteúdo"),
   new Speaker(
     "Karine Paz Fagundes Cordeiro",
     "./speakers/karinepaz.jpeg",

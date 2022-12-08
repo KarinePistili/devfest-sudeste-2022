@@ -11,9 +11,9 @@ export const events: any = {
       false
     ),
     new Event(
-      "Em breve!",
+      "Como meu modelo tirou essa conclusão? Uma jornada na explicabilidade de modelos",
       [speakers[1]],
-      "Em breve mais informações!",
+      "Luciano é engenheiro de software e mestrando em inteligência artificial aplicada à área da saúde. Também é Developer Advocate no time de engenharia de Cloud AI do Google. Nesta sessão iremos juntos na jornada de entender como modelos complexos de machine learning tomam suas conclusões, desde a visão dos conceitos basicos de explicabilidade de modelos, as abordagens possíveis e alguns exemplos.",
       "sala principal",
       false
     ),
@@ -50,14 +50,14 @@ export const events: any = {
     new Event(
       "Novidades sobre acessibilidade no Android",
       [speakers[5]],
-      "Em breve mais informações!",
+      "Formada em Sistemas de Informação, Dev Android, estuda Acessibilidade desde a faculdade. Em sua palestra vai mostrar as novidades criadas para oferecer acessibilidade no Android.",
       "mobile",
       false
     ),
     new Event(
       "Conceitos de Arquitetura de Projetos no Flutter",
       [speakers[6]],
-      "Em breve mais informações!",
+      "Desenvolvedora Flutter formada em Tecnologia em Banco de dados. A palestra traz conceitos básicos para quem é iniciante na área de tecnologia, abordando organização do projeto, a escolha da arquitetura e como garantir um dia a dia mais produtivo.",
       "mobile",
       false
     ),
@@ -89,14 +89,14 @@ export const events: any = {
     new Event(
       "Infraestrutura como produto - Deixando de ser um balcão de demandas",
       [speakers[10]],
-      "Em breve mais informações!",
+      "Trabalha na DNSFilter, focado em infraestrutura como código. É fundador da Mentoria de IaC. Organizador e Autor dos livros: Docker para desenvolvedores e Deploy em produção para desenvolvedores. Na sua palestra vai mostrar como a formatação da sua entrega como produto interno de infraestrutura pode ajudar a mudar a entregar o valor que o time de operações/sysadmin sempre desejaram",
       "devops/infra",
       false
     ),
     new Event(
-      "MLOPS",
+      "MLOPS em Sistemas de Recomendação: Como são os princípios na prática?",
       [speakers[11]],
-      "Em breve mais informações!",
+      "Rodolfo é Engenheiro de Machine Learning e atua com sistemas de recomendação na página da globo.com. Nesta palestra vai apresentar os princípios das operações de machine learning e mostrar como eles funcionam na prática em sistemas de recomendação.",
       "devops/infra",
       false
     ),
@@ -112,7 +112,7 @@ export const events: any = {
     new Event(
       "Processos seletivos na área tech: por onde começar?",
       [speakers[13], speakers[14]],
-      "Em breve mais informações!",
+      "Gabriela Amâncio é psicóloga especialista em Gestão de Talentos e Carreiras e hoje atua no time de Talent Acquisition do Nubank e junto com Letícia Coelho, que é Software Engineer na ArcTouch, criadora de conteúdo, palestrante, escritora e mentora, vai falar sobre como se preparar para processos seletivos do mercado de tecnologia, com orientações sobre entrevistas, Linkedin, GitHub e construção de portifólio.",
       "carreira",
       false
     ),
