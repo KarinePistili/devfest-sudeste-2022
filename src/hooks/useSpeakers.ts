@@ -13,8 +13,8 @@ export const speakers: Speaker[] = [
     "./speakers/luisleao.png",
     "Staff Developer Evangelist na Twilio"
   ),
-  new Speaker("Filipe Nunes", "./speakers/gdg.png", "Android Software Engineer"),
-  new Speaker("Larissa Guimarães", "./speakers/gdg.png", "Formada em Sistemas de Informação | Dev Android"),
+  new Speaker("Filipe Nunes", "./speakers/filipenunes.jpeg", "Android Software Engineer"),
+  new Speaker("Larissa Guimarães", "./speakers/larissaguimaraes.jpeg", "Formada em Sistemas de Informação | Dev Android"),
   new Speaker("Maiza Louise Pereira", "./speakers/maizalouise.png", "Desenvolvedora Flutter | Formada em Tecnologia em Banco de Dados"),
   new Speaker(
     "Fernando Sedrez",
@@ -32,7 +32,7 @@ export const speakers: Speaker[] = [
     "PhD Inteligência Artificial | GDE Machine Learning | Head de Plataformas de Atendimento Digital"
   ),
   new Speaker('Rafael Brito Gomes "Gomex"', "./speakers/rafaelbrito.jpg", "DNSFilter | Fundador da Mentoria de IaC | Escritor"),
-  new Speaker("Rodolfo Teles", "./speakers/gdg.png", "Engenheiro de Machine Learning"),
+  new Speaker("Rodolfo Teles", "./speakers/rodolfo.jpeg", "Engenheiro de Machine Learning"),
   new Speaker(
     "André Luiz Figueiredo de Castro",
     "./speakers/andreluiz.jpeg",
