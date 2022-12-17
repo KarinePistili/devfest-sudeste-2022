@@ -212,7 +212,7 @@ const TracksSection: React.FC = ({}) => {
             <iframe
               width="100%"
               height="315"
-              src="https://www.youtube.com/embed/23-jd51zLqo"
+              src="https://www.youtube.com/embed/7VzWvr3i1Pg"
               title="YouTube video player"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
@@ -223,7 +223,7 @@ const TracksSection: React.FC = ({}) => {
             <iframe
               width="100%"
               height="315"
-              src="https://www.youtube.com/embed/23-jd51zLqo"
+              src="https://www.youtube.com/embed/dDqLBDVnC68"
               title="YouTube video player"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
@@ -236,7 +236,7 @@ const TracksSection: React.FC = ({}) => {
             <iframe
               width="100%"
               height="315"
-              src="https://www.youtube.com/embed/23-jd51zLqo"
+              src="https://www.youtube.com/embed/hm2lOcYIAlw"
               title="YouTube video player"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
@@ -247,7 +247,7 @@ const TracksSection: React.FC = ({}) => {
             <iframe
               width="100%"
               height="315"
-              src="https://www.youtube.com/embed/23-jd51zLqo"
+              src="https://www.youtube.com/embed/8al7ZzBmZKM"
               title="YouTube video player"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
