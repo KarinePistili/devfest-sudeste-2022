@@ -183,7 +183,7 @@ const TracksSection: React.FC = ({}) => {
           <Col>
             <h4>(14/12) Esquenta - com Cami Martins</h4>
             <iframe
-              width="50%"
+              width="100%"
               height="315"
               src="https://www.youtube.com/embed/K09-nxC3J20"
               title="YouTube video player"
@@ -191,7 +191,7 @@ const TracksSection: React.FC = ({}) => {
               allowFullScreen
             ></iframe>
           </Col>
-          {/* <Col>
+          <Col>
             <h4>(16/12) Dia 1 - DevFest Sudeste 2022</h4>
             <iframe
               width="100%"
@@ -201,9 +201,9 @@ const TracksSection: React.FC = ({}) => {
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
             ></iframe>
-          </Col> */}
+          </Col>
         </Row>
-        {/* <h3 style={{ marginTop: "80px" }}>
+        <h3 style={{ marginTop: "80px" }}>
           (17/12) Dia 2 - DevFest Sudeste 2022
         </h3>
         <Row style={{ marginTop: "20px" }}>
@@ -253,7 +253,7 @@ const TracksSection: React.FC = ({}) => {
               allowFullScreen
             ></iframe>
           </Col>
-        </Row> */}
+        </Row>
       </Container>
       <Container id="agenda">
         <h2 className={styles.Agenda}> Agenda </h2>
